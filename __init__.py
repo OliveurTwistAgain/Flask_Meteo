@@ -5,8 +5,8 @@ from datetime import datetime
 from urllib.request import urlopen
 import sqlite3
                                                                                                                                        
-app = Flask(__name__)  
-
+app = Flask(__name__)
+ 
 @app.route('/commits/data')
 def get_commits_data():
     url = 'https://api.github.com/repos/OliveurTwistAgain/Flask_Meteo/commits'
@@ -16,11 +16,14 @@ def get_commits_data():
     
     commit_minutes = []
     for commit in json_content:
-        date_string = commit['commit']['author']['date']
-        date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
-        commit_minutes.append(date_object.minute)
+        author = commit['commit']['author']['name']
+        if author == 'OliveurTwistAgain':
+            date_string = commit['commit']['author']['date']
+            date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
+            commit_minutes.append(date_object.minute)
     
-    return jsonify(commit_minutes=commit_minutes)
+    unique_commit_minutes = list(set(commit_minutes))
+    return jsonify(commit_minutes=unique_commit_minutes)
  
 
 @app.route("/commits/")
