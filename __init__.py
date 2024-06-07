@@ -29,7 +29,7 @@ def mongraphique():
 
 @app.route("/histogramme/")
 def mongraphique2():
-    return render_template("graphique2.html")
+    return render_template("histogramme.html")
 
 #@app.route("/contact/")
 #def MaPremiereAPI():
