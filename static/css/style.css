@@ -46,8 +46,8 @@
 
 .contact__group {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .contact__box {
