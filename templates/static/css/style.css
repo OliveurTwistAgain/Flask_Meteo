@@ -1,0 +1,107 @@
+/* Styles for contact section */
+.contact {
+    padding: 80px 0;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.contact__data {
+    text-align: center;
+}
+
+.contact__mail {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__group {
+    display: flex;
+    gap: 20px;
+}
+
+.contact__box {
+    position: relative;
+}
+
+.contact__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Rajout de padding entre les inputs */
+.contact__input:not(:placeholder-shown) {
+    padding-top: 30px;
+}
+
+/* Ajout d'espace entre les champs */
+.contact__input:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.contact__label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.contact__input:focus+.contact__label,
+.contact__input:valid+.contact__label {
+    top: 0;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #333;
+}
+
+.contact__area {
+    position: relative;
+}
+
+.contact__input[type="textarea"] {
+    height: 120px;
+}
+
+.contact__message {
+    margin-top: 10px;
+    color: #333;
+}
+
+.contact__button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+    background-color: #0056b3;
+}
