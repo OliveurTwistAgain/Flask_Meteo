@@ -21,7 +21,7 @@
         function renderChart(commitMinutes) {
             const ctx = document.getElementById('commitsChart').getContext('2d');
             const chart = new Chart(ctx, {
-                type: 'line', // Vous pouvez aussi utiliser 'bar', 'pie', etc.
+                type: 'bar', // Vous pouvez aussi utiliser 'bar', 'pie', etc.
                 data: {
                     labels: commitMinutes.map((minute, index) => index + 1),
                     datasets: [{
