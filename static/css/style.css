@@ -1,10 +1,14 @@
 /* Styles pour Body */
-
 .bg {
     background: linear-gradient(to right, #4aaedf, #3bc388);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styles for contact section */
+/* Styles pour contact section */
 .contact {
     padding: 80px 0;
 }
@@ -14,6 +18,9 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contact__data {
@@ -24,6 +31,7 @@
     background-color: #f9f9f9;
     padding: 40px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact__title {
@@ -39,10 +47,12 @@
 .contact__group {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .contact__box {
     position: relative;
+    flex: 1;
 }
 
 .contact__input {
@@ -51,44 +61,12 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-}
-
-/* Rajout de padding entre les inputs */
-.contact__input:not(:placeholder-shown) {
-    padding-top: 30px;
-}
-
-/* Ajout d'espace entre les champs */
-.contact__input:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.contact__label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 16px;
-    pointer-events: none;
-    transition: 0.3s ease-in-out;
-}
-
-.contact__input:focus+.contact__label,
-.contact__input:valid+.contact__label {
-    top: 0;
-    left: 10px;
-    transform: translateY(-50%);
-    font-size: 12px;
-    color: #333;
-}
-
-.contact__area {
-    position: relative;
-}
-
-.contact__input[type="textarea"] {
+.contact__area textarea {
     height: 120px;
+    resize: none;
 }
 
 .contact__message {
@@ -106,8 +84,15 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact__button:hover {
     background-color: #0056b3;
+}
+
+.contact__button i {
+    margin-right: 8px;
 }

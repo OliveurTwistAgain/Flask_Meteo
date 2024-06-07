@@ -4,52 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Oliveur Twist Again mode Flask Meteo</title>
+    <title>Contact Oliveur Twist Again - Flask Meteo</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body class="bg">
-
-    <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
         <div class="contact__container grid">
             <div class="contact__data">
-                <h2 class="section__title-2">
-                    <span>À vous lire.</span>
-                </h2>
-
-                <p class="contact__description-1">
-                    Toujours un plaisir !
-                </p>
-
+                <h2 class="section__title-2"><span>À vous lire.</span></h2>
+                <p class="contact__description-1">Toujours un plaisir !</p>
             </div>
 
             <div class="contact__mail">
-                <h2 class="contact__title">
-                    Votre Message
-                </h2>
-
+                <h2 class="contact__title">Votre Message</h2>
                 <form action="https://formspree.io/f/xayrvypy" class="contact__form" id="contact-form" method="post">
                     <div class="contact__group">
                         <div class="contact__box">
                             <input type="text" name="user_name" class="contact__input" id="name" placeholder="Nom"
                                 required>
-                            <!-- <label for="name" class="contact__label">Nom</label> -->
                         </div>
 
                         <div class="contact__box">
                             <input type="email" name="user_email" class="contact__input" id="email" placeholder="Email"
                                 required>
-                            <!-- <label for="email" class="contact__label">Email</label> -->
                         </div>
                     </div>
 
-
-
                     <div class="contact__box contact__area">
-                        <textarea name="user__message" id="message" class="contact__input" placeholder="Message"
+                        <textarea name="user_message" id="message" class="contact__input" placeholder="Message"
                             required></textarea>
-                        <!-- <label for="message" class="contact__label">Message</label> -->
                     </div>
 
                     <p class="contact__message" id="contact-message"></p>
@@ -57,18 +41,10 @@
                     <button type="submit" class="contact__button button">
                         <i class="ri-send-plane-line"></i> Envoyer
                     </button>
-
                 </form>
             </div>
-            <div class="section__title-2"></div>
-
-
-        </div>
-
         </div>
     </section>
-    </main>
-
 </body>
 
 </html>
