@@ -1,3 +1,9 @@
+/* Styles pour Body */
+
+.bg {
+    background: linear-gradient(to right, #4aaedf, #3bc388);
+}
+
 /* Styles for contact section */
 .contact {
     padding: 80px 0;
